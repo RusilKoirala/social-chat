@@ -11,7 +11,8 @@ import {
   ArrowRight,
   Sun,
   Moon,
-  Check
+  Check,
+  Github,
 } from 'lucide-react';
 
 export default function Landing() {
@@ -80,26 +81,44 @@ export default function Landing() {
               <MessageCircle className="text-primary-600" size={32} />
               <span className="text-xl font-bold">Social Chat</span>
             </div>
-            <div className="flex items-center gap-4">
-              <button
-                onClick={toggleTheme}
-                className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
-              >
-                {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
-              </button>
-              <button
-                onClick={() => navigate('/login')}
-                className="btn-secondary"
-              >
-                Sign In
-              </button>
-              <button
-                onClick={() => navigate('/login')}
-                className="btn-primary"
-              >
-                Get Started
-              </button>
-            </div>
+           <div className="flex items-center gap-4">
+
+  <a
+  href="https://github.com/RusilKoirala/social-chat"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-gray-300 dark:border-gray-700
+             bg-white dark:bg-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800
+             text-sm font-medium transition-colors"
+>
+  <Github size={18} />
+  <span className="hidden sm:inline">Star on GitHub</span>
+</a>
+
+
+  <button
+    onClick={toggleTheme}
+    className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
+  >
+    {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
+  </button>
+
+  <button
+    onClick={() => navigate('/login')}
+    className="btn-secondary"
+  >
+    Sign In
+  </button>
+
+  <button
+    onClick={() => navigate('/login')}
+    className="btn-primary"
+  >
+    Get Started
+  </button>
+
+</div>
+
           </div>
         </div>
       </header>

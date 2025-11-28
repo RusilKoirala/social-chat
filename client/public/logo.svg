@@ -1,0 +1,14 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="32" cy="32" r="32" fill="#3B82F6"/>
+  
+  <!-- Chat Bubble 1 (Main) -->
+  <path d="M20 18C20 15.7909 21.7909 14 24 14H40C42.2091 14 44 15.7909 44 18V30C44 32.2091 42.2091 34 40 34H28L20 40V18Z" fill="white"/>
+  
+  <!-- Chat Bubble 2 (Secondary) -->
+  <path d="M24 30H36C38.2091 30 40 31.7909 40 34V44C40 46.2091 38.2091 48 36 48H26L20 52V34C20 31.7909 21.7909 30 24 30Z" fill="#93C5FD"/>
+  
+  <!-- Message Lines in Main Bubble -->
+  <rect x="26" y="20" width="12" height="2" rx="1" fill="#3B82F6"/>
+  <rect x="26" y="25" width="8" height="2" rx="1" fill="#3B82F6"/>
+</svg>

@@ -9,7 +9,6 @@ node_modules
 .env.local
 test/
 *.md
-!RENDER_DEPLOYMENT.md
 docker-compose*.yml
 Dockerfile*
 nginx.conf
