@@ -1,0 +1,16 @@
+# Render ignore file
+.git
+.github
+.vscode
+.DS_Store
+*.log
+node_modules
+.env
+.env.local
+test/
+*.md
+!RENDER_DEPLOYMENT.md
+docker-compose*.yml
+Dockerfile*
+nginx.conf
+start.sh
