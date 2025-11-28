@@ -7,6 +7,7 @@ import cookieParser from 'cookie-parser';
 import { connectDB } from './config/database.js';
 import { initializeSocket } from './config/socket.js';
 import { apiLimiter } from './middleware/rateLimiter.js';
+import { startKeepAlive } from './services/keepAlive.js';
 import authRoutes from './routes/auth.js';
 import messageRoutes from './routes/messages.js';
 import userRoutes from './routes/users.js';
@@ -46,6 +47,11 @@ app.use(cookieParser());
 
 // Database Connection
 connectDB();
+
+// Start MongoDB keep-alive service (prevents free tier from sleeping)
+if (process.env.NODE_ENV === 'production') {
+  startKeepAlive();
+}
 
 // Initialize Socket.IO
 const io = initializeSocket(httpServer);
